@@ -1,0 +1,25 @@
+{
+    "name": "asialong/pinduoduo-sdk",
+    "description": "拼多多的php版sdk",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "hanson/foundation-sdk": "4.0.1"
+    },
+    "require-dev": {
+        "hanson/foundation-sdk": "4.0.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "William Wang",
+            "email": "75025268@qq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Asialong\\PinduoduoSdk\\": "src/"
+        }
+    }
+}
