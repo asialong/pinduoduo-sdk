@@ -2,11 +2,19 @@
 namespace Asialong\PinduoduoSdk;
 
 use Hanson\Foundation\AbstractAccessToken;
+use Hanson\Foundation\Foundation;
 
 class BaseAccessToken extends AbstractAccessToken
 {
     const TOKEN_API = 'http://open-api.pinduoduo.com/oauth/token';
     protected $code;
+
+    public function __construct(array $config, Foundation $app)
+    {
+        parent::__construct($app);
+        $this->appId = $config['client_id'];
+        $this->secret = $config['client_secret'];
+    }
 
     /**
      * 使用code从服务器获取token
