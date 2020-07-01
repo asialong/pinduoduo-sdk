@@ -53,6 +53,22 @@ class BaseAccessToken extends AbstractAccessToken
     }
 
     /**
+     * @return mixed
+     */
+    public function getClientId()
+    {
+        return $this->appId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSecret()
+    {
+        return $this->secret;
+    }
+
+    /**
      * @param mixed $code
      *
      * @return AccessToken
