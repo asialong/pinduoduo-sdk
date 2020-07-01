@@ -8,7 +8,7 @@ use Hanson\Foundation\Foundation;
  *
  * @property \Asialong\PinduoduoSdk\Api           $api
  * @property \Asialong\PinduoduoSdk\Api           $auth_api
- * @property \Asialong\PinduoduoSdk\AccessToken   $access_token
+ * @property \Asialong\PinduoduoSdk\BaseAccessToken   $access_token
  * @property \Asialong\PinduoduoSdk\Oauth\PreAuth $pre_auth
  * @property \Asialong\PinduoduoSdk\Oauth\Oauth   $oauth
  */
