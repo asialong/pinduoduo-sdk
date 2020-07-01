@@ -1,7 +1,7 @@
 <?php
 namespace Asialong\PinduoduoSdk\Oauth;
 
-use Asialong\PinduoduoSdk\BaseAccessToken;
+use Asialong\PinduoduoSdk\Oauth\AccessToken as BaseAccessToken;
 use Hanson\Foundation\Foundation;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
