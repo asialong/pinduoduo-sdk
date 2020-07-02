@@ -18,10 +18,10 @@ class ServiceProvider implements ServiceProviderInterface
     public function register(Container $pimple)
     {
         $pimple['oauth.access_token'] = function (Foundation $pimple) {
-            $accessToken = new BaseAccessToken([
-                'client_id' => $pimple->getConfig('client_id'),
-                'client_secret' => $pimple->getConfig('client_secret')
-            ],$pimple);
+            $accessToken = new BaseAccessToken(
+                $pimple->getConfig('client_id'),
+                $pimple->getConfig('client_secret')
+            );
 
             $accessToken->setRequest($pimple['request']);
 

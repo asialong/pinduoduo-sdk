@@ -9,11 +9,24 @@ class BaseAccessToken extends AbstractAccessToken
     const TOKEN_API = 'http://open-api.pinduoduo.com/oauth/token';
     protected $code;
 
-    public function __construct(array $config, Foundation $app)
+    /**
+     * key of token in json.
+     *
+     * @var string
+     */
+    protected $tokenJsonKey = 'access_token';
+
+    /**
+     * key of expires in json.
+     *
+     * @var string
+     */
+    protected $expiresJsonKey = 'expires_in';
+
+    public function __construct($clientId, $secret)
     {
-        parent::__construct($app);
-        $this->appId = $config['client_id'];
-        $this->secret = $config['client_secret'];
+        $this->appId = $clientId;
+        $this->secret = $secret;
     }
 
     /**
