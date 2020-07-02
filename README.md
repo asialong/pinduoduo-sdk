@@ -71,6 +71,7 @@ $result   = $pdd->auth_api->request('pdd.ddk.oauth.goods.pid.query');
 
 ### 感谢
 
+-  [justmd5/pinduoduo-sdk](https://github.com/justmd5/pinduoduo-sdk)
 -  [hanson/foundation-sdk](https://github.com/Hanson/foundation-sdk)
 
 ## License
