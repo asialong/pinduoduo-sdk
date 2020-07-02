@@ -12,6 +12,8 @@ class BaseAccessToken extends AbstractAccessToken
     public function __construct(array $config, Foundation $app)
     {
         parent::__construct($app);
+        $this->appId = $config['client_id'];
+        $this->secret = $config['client_secret'];
     }
 
     /**
