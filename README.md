@@ -1,5 +1,5 @@
 ### 要求
-1. PHP >= 7.4
+1. PHP >= 7.0
 2. **[Composer](https://getcomposer.org/)**
 3. ext-curl 拓展
 4. ext-json 拓展
