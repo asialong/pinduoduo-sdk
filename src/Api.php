@@ -21,11 +21,11 @@ class Api extends AbstractAPI
     }
 
     /**
-     * @param $params
+     * @param array $params
      *
      * @return string
      */
-    private function signature($params)
+    private function signature(array $params)
     {
         ksort($params);
         $paramsStr = '';
@@ -45,7 +45,7 @@ class Api extends AbstractAPI
      *
      * @return mixed
      */
-    public function request($method, $params = [], $data_type = 'JSON')
+    public function request(string $method, array $params = [], string $data_type = 'JSON')
     {
         $http = $this->getHttp();
         $params = $this->paramsHandle($params);

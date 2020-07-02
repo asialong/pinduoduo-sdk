@@ -2,7 +2,6 @@
 namespace Asialong\PinduoduoSdk;
 
 use Hanson\Foundation\AbstractAccessToken;
-use Hanson\Foundation\Foundation;
 
 class BaseAccessToken extends AbstractAccessToken
 {

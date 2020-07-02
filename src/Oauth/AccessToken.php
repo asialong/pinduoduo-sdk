@@ -16,11 +16,11 @@ class AccessToken extends BaseAccessToken
     /**
      * 获取 token from server.
      *
-     * @param $params
+     * @param array $params
      *
      * @return mixed
      */
-    public function token($params)
+    public function token(array $params)
     {
         $response = $this->getHttp()->json(self::TOKEN_API, $params);
 
