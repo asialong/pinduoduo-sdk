@@ -2,12 +2,23 @@
     "name": "asialong/pinduoduo-sdk",
     "description": "拼多多的php版sdk",
     "type": "library",
+    "keywords": [
+        "拼多多",
+        "拼多多SDK",
+        "多多客",
+        "pinduoduo",
+        "duoduoke",
+        "sdk"
+    ],
     "require": {
-        "php": ">=7.4",
-        "hanson/foundation-sdk": "4.0.1"
+        "php": ">=7.0",
+        "hanson/foundation-sdk": "^3.0 || ^4.0",
+        "ext-json": "*"
     },
     "require-dev": {
-        "hanson/foundation-sdk": "4.0.1"
+        "php": ">=7.0",
+        "hanson/foundation-sdk": "^3.0 || ^4.0",
+        "ext-json": "*"
     },
     "license": "MIT",
     "authors": [
