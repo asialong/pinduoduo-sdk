@@ -1,5 +1,5 @@
 ### 要求
-1. PHP >= 7.0
+1. PHP >= 7.4
 2. **[Composer](https://getcomposer.org/)**
 3. ext-curl 拓展
 4. ext-json 拓展
@@ -16,8 +16,8 @@ use \Asialong\PinduoduoSdk\Pdd;
 
 require __DIR__ . '/vendor/autoload.php';
 $config = [
-    'client_id'    => 'xxxxxx69e3940c6b93xxxxxx',
-    'client_secret' => 'c2eda0c398xxxxxxbd63ff57bf22c05xxxxxx',
+    'client_id'    => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+    'client_secret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
     'debug'              => true,
     'member_type'        => 'MERCHANT',//用户角色 ：MERCHANT(商家授权),H5(移动端),多多客(JINBAO),
     'redirect_uri'       => 'https://test.xxx.com/callback',
@@ -54,6 +54,7 @@ $pdd->pre_auth->authorizationRedirect();
 ```php
 $token = $pdd->pre_auth->getAccessToken();
 //也可以通过上面得到的 refresh_token 去刷新令牌
+//拼多多官方刷新令牌功能暂时无效，token失效就重新授权
 //$token = $pdd->pre_auth->refreshToken($token['refresh_token']);
 ```
 * 创建授权应用
