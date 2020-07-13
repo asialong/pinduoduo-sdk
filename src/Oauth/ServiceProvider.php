@@ -3,6 +3,7 @@ namespace Asialong\PinduoduoSdk\Oauth;
 
 use Asialong\PinduoduoSdk\Oauth\AccessToken as BaseAccessToken;
 use Hanson\Foundation\Foundation;
+use Hanson\Foundation\Http;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
 
@@ -20,7 +21,8 @@ class ServiceProvider implements ServiceProviderInterface
         $pimple['oauth.access_token'] = function (Foundation $pimple) {
             $accessToken = new BaseAccessToken(
                 $pimple->getConfig('client_id'),
-                $pimple->getConfig('client_secret')
+                $pimple->getConfig('client_secret'),
+                new Http($pimple)
             );
 
             $accessToken->setRequest($pimple['request']);

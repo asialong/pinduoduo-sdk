@@ -22,10 +22,11 @@ class BaseAccessToken extends AbstractAccessToken
      */
     protected $expiresJsonKey = 'expires_in';
 
-    public function __construct($clientId, $secret)
+    public function __construct($clientId, $secret, $http)
     {
         $this->appId = $clientId;
         $this->secret = $secret;
+        $this->setHttp($http);
     }
 
     /**
