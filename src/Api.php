@@ -45,12 +45,12 @@ class Api extends AbstractAPI
      *
      * @return mixed
      */
-    public function request(string $method, array $params = [], string $data_type = 'JSON')
+    public function request(string $method, array $source_params = [], string $data_type = 'JSON')
     {
         $http = $this->getHttp();
-        $params = $this->paramsHandle($params);
+        $params = $this->paramsHandle($source_params);
         if ($this->needToken) {
-            $params['access_token'] = $this->pdd['oauth.access_token']->getToken();
+            $params['access_token'] = $source_params['access_token'];
         }
         $params['client_id'] = $this->pdd['oauth.access_token']->getClientId();
         $params['sign_method'] = 'md5';
