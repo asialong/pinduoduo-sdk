@@ -50,6 +50,7 @@ class Api extends AbstractAPI
         $http = $this->getHttp();
         $params = $this->paramsHandle($source_params);
         if ($this->needToken) {
+//            $params['access_token'] = $this->pdd['oauth.access_token']->getToken();
             $params['access_token'] = $source_params['access_token'];
         }
         $params['client_id'] = $this->pdd['oauth.access_token']->getClientId();
