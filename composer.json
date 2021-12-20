@@ -12,12 +12,11 @@
     ],
     "require": {
         "php": ">=7.0",
-        "hanson/foundation-sdk": "4.0.1",
+        "hanson/foundation-sdk": "4.0.2",
         "ext-json": "*"
     },
     "require-dev": {
         "php": ">=7.0",
-        "hanson/foundation-sdk": "4.0.1",
         "ext-json": "*"
     },
     "license": "MIT",
